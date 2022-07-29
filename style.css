@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
 body {
     background-color: #212327;
     color: white;
@@ -17,7 +18,7 @@ body {
 .navMenu a {
     color: #f6f4e6;
     text-decoration: none;
-    font-size: 1.5em;
+    font-size: 20px;
     font-family: 'Nunito', sans-serif;
     display: inline;
     gap: 20px;
@@ -73,8 +74,29 @@ body {
     cursor: pointer;
 }
 .main button:hover {
-    background-color: #c91902;
+    background-color: #df1a00f5;
     transition: 0.3s;
+}
+#btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+#btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+#btn:hover span {
+    padding-right: 25px;
+}
+#btn:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 .row {
     display: flex;
@@ -84,7 +106,7 @@ body {
     flex-direction: column;
     width: 20%;
     border-radius: 12px;
-    background-color: #1b1e20f1;
+    background-color: #15181afb;
     color: white;
     margin-top: 20px;
     margin-bottom: 100px;
@@ -173,6 +195,7 @@ body {
     }
     .navMenu {
         overflow: hidden;
-        transition: 0.3s;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 }
